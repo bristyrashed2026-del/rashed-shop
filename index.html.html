@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rashed Shop | Premium Men's T-Shirt Store</title>
+<style>
+:root{
+  --ink:#0f172a;
+  --muted:#64748b;
+  --accent:#f97316;
+  --accent-dark:#ea580c;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --line:#e2e8f0;
+  --messenger:#0084ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Bengali",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{text-decoration:none;color:inherit}
+
+/* Top bar & Header */
+.announce{background:linear-gradient(90deg,#0f172a,#1e293b,#0f172a);color:#fff;text-align:center;padding:10px 16px;font-size:12.5px;letter-spacing:.3px;font-weight:500}
+.announce span{color:#fb923c;font-weight:700}
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1280px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:950;font-size:24px;letter-spacing:-1px;display:flex;align-items:center;gap:6px}
+.logo-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block}
+nav{display:flex;gap:26px;font-size:14px;font-weight:600;color:#475569}
+nav a:hover{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.pill{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;transition:.2s}
+.pill:hover{background:var(--accent)}
+
+/* Hero Section */
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 20%,rgba(249,115,22,.18),transparent 36%),radial-gradient(circle at 12% 90%,rgba(14,165,233,.14),transparent 42%),linear-gradient(135deg,#fff7ed 0%,#f8fafc 50%,#eff6ff 100%);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1280px;margin:auto;padding:64px 24px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #fed7aa;color:var(--accent-dark);padding:7px 14px;border-radius:999px;font-size:12px;font-weight:800;box-shadow:0 4px 12px rgba(249,115,22,.08)}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.06;letter-spacing:-2px;margin:16px 0}
+h1 span{background:linear-gradient(90deg,#f97316,#ea580c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:520px;line-height:1.8;color:#475569;font-size:16px;margin-bottom:24px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;box-shadow:0 10px 24px rgba(249,115,22,.3);transition:.2s}
+.cta:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.cta-sec{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:10px;background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}
+.cta-sec:hover{border-color:var(--ink)}
+.hero-stats{display:flex;gap:28px;margin-top:32px;padding-top:22px;border-top:1px solid var(--line)}
+.stat b{display:block;font-size:22px;font-weight:900}
+.stat span{font-size:12px;color:var(--muted)}
+
+.hero-showcase{position:relative;height:360px;display:flex;justify-content:center;align-items:center}
+.showcase-card{position:relative;width:100%;max-width:420px;height:340px;background:linear-gradient(145deg,#ffffff,#f1f5f9);border:1px solid #e2e8f0;border-radius:24px;box-shadow:0 24px 50px rgba(15,23,42,.1);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.showcase-card img{width:100%;height:100%;object-fit:cover}
+.float-chip{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);padding:12px 16px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 10px 25px rgba(15,23,42,.12)}
+.float-chip strong{font-size:13px;display:block}
+.float-chip small{font-size:11px;color:var(--muted)}
+.float-tag{background:var(--ink);color:#fff;padding:6px 10px;border-radius:8px;font-size:11px;font-weight:800}
+
+/* Trust strip */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust-inner{max-width:1280px;margin:auto;padding:18px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;font-size:13px;font-weight:700;color:#334155}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:8px;padding:6px}
+
+/* Catalog Controls */
+.section{max-width:1280px;margin:auto;padding:56px 24px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.eyebrow{color:var(--accent);font-size:12px;letter-spacing:1.8px;font-weight:900;text-transform:uppercase}
+h2{font-size:32px;letter-spacing:-1px;margin:6px 0 0}
+
+.toolbar{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;box-shadow:0 4px 16px rgba(15,23,42,.03)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{border:1px solid var(--line);background:#f8fafc;color:#334155;padding:9px 16px;border-radius:999px;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
+.filter:hover{border-color:var(--ink)}
+.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.search-sort{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search-box{position:relative}
+.search-box input{padding:10px 14px 10px 36px;border:1px solid var(--line);border-radius:10px;font-size:13px;width:230px;outline:none;background:#f8fafc}
+.search-box input:focus{border-color:var(--accent);background:#fff}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted)}
+select.sort{padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:13px;background:#f8fafc;color:var(--ink);font-weight:600;outline:none;cursor:pointer}
+
+.result-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:13px;color:var(--muted)}
+
+/* Product Grid & Cards */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;box-shadow:0 4px 14px rgba(15,23,42,.04)}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(15,23,42,.11);border-color:#cbd5e1}
+.img-wrap{position:relative;height:255px;background:#f1f5f9;overflow:hidden}
+.img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.card:hover .img-wrap img{transform:scale(1.06)}
+.brand-badge{position:absolute;top:12px;left:12px;background:rgba(15,23,42,.88);color:#fff;padding:5px 10px;border-radius:6px;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.stock-badge{position:absolute;top:12px;right:12px;background:#ecfdf5;color:#059669;border:1px solid #a7f3d0;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:800}
+.quick-view{position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,.94);color:var(--ink);border:0;padding:7px 11px;border-radius:8px;font-size:11px;font-weight:800;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.12);opacity:0;transform:translateY(6px);transition:.2s}
+.card:hover .quick-view{opacity:1;transform:translateY(0)}
+
+.info{padding:16px;display:flex;flex-direction:column;flex:1}
+.meta{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:4px}
+.name{font-size:15px;font-weight:800;line-height:1.35;margin-bottom:8px;color:var(--ink)}
+
+/* Size selector pills */
+.sizes{display:flex;gap:5px;margin-bottom:14px;flex-wrap:wrap}
+.size-btn{border:1px solid var(--line);background:#f8fafc;color:#475569;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;cursor:pointer;transition:.15s}
+.size-btn.selected{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.price-row{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.price-box .old{font-size:12px;color:#94a3b8;text-decoration:line-through;margin-right:5px}
+.price-box .price{font-size:18px;font-weight:900;color:var(--ink)}
+.order{border:0;background:var(--ink);color:#fff;padding:10px 14px;border-radius:9px;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.2s}
+.order:hover{background:var(--messenger)}
+
+/* Modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.65);backdrop-filter:blur(4px);z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;border-radius:20px;max-width:740px;width:100%;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 25px 60px rgba(0,0,0,.3);position:relative;animation:pop .2s ease}
+@keyframes pop{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:0;background:#f1f5f9;font-size:18px;font-weight:bold;cursor:pointer;z-index:2}
+.modal-img{background:#f1f5f9;height:100%;min-height:320px}
+.modal-img img{width:100%;height:100%;object-fit:cover}
+.modal-body{padding:26px;display:flex;flex-direction:column;justify-content:center}
+.modal-body h3{margin:8px 0 10px;font-size:22px}
+.modal-body p{color:#475569;font-size:13.5px;line-height:1.7;margin:0 0 16px}
+.modal-sizes{display:flex;gap:8px;margin-bottom:18px}
+.modal-sizes button{padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:#f8fafc;font-weight:700;cursor:pointer}
+.modal-sizes button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* Promo & Footer */
+.promo{max-width:1232px;margin:0 auto 60px;padding:38px;border-radius:22px;background:linear-gradient(120deg,#0f172a,#1e293b,#334155);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.promo h2{color:#fff;margin:0 0 8px}
+.promo p{color:#cbd5e1;margin:0;font-size:14.5px;max-width:540px}
+footer{background:#0f172a;color:#fff;text-align:center;padding:44px 20px}
+footer p{color:#94a3b8;font-size:13.5px;line-height:1.8}
+.messenger{position:fixed;z-index:40;right:22px;bottom:22px;border-radius:999px;background:var(--messenger);color:#fff;padding:14px 20px;font-size:13.5px;font-weight:700;box-shadow:0 12px 28px rgba(0,132,255,.4);display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.messenger:hover{transform:translateY(-3px)}
+
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  nav{display:none}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .img-wrap{height:185px}
+  .info{padding:12px}
+  .name{font-size:13px}
+  .order{padding:8px 10px;font-size:11.5px}
+  .modal{grid-template-columns:1fr}
+  .modal-img{min-height:220px;max-height:240px}
+  .promo{flex-direction:column;align-items:flex-start;margin:0 16px 40px;padding:26px}
+  .search-box input{width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">🔥 NEW ARRIVAL 2026 • <span>PUMA • ZARA • ADIDAS</span> ৫০টি প্রিমিয়াম টি-শার্ট কালেকশন • অর্ডার করুন সরাসরি Messenger-এ</div>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#">RASHED SHOP<span class="logo-dot"></span></a>
+    <nav>
+      <a href="#home">হোম</a>
+      <a href="#products">কালেকশন (৫০)</a>
+      <a href="#offers">স্পেশাল অফার</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="pill" href="#products">Shop Now</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="badge">✦ PREMIUM MEN'S T-SHIRT STORE</div>
+      <h1>Elevate Your<br><span>Everyday Style.</span></h1>
+      <p>Puma, Zara এবং Adidas স্টাইলের ৫০টি বাছাইকৃত প্রিমিয়াম কটন টি-শার্ট। আপনার পছন্দের ডিজাইন ও সাইজ বেছে নিয়ে এক ক্লিকেই Messenger-এ অর্ডার কনফার্ম করুন।</p>
+      <div class="hero-btns">
+        <a class="cta" href="#products">৫০টি কালেকশন দেখুন →</a>
+        <a class="cta-sec" href="https://m.me/61594718849729" target="_blank" rel="noopener">💬 Messenger-এ কথা বলুন</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>৫০+</b><span>টি-শার্ট ডিজাইন</span></div>
+        <div class="stat"><b>৩ ব্র্যান্ড</b><span>Puma • Zara • Adidas</span></div>
+        <div class="stat"><b>১০০%</b><span>প্রিমিয়াম কটন ফ্যাব্রিক</span></div>
+      </div>
+    </div>
+    <div class="hero-showcase">
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Premium T-Shirt Collection">
+        <div class="float-chip">
+          <div>
+            <strong>Puma • Zara • Adidas Edition</strong>
+            <small>S, M, L, XL সব সাইজ স্টকে আছে</small>
+          </div>
+          <span class="float-tag">৳790 থেকে</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item">🚚 সারা বাংলাদেশে হোম ডেলিভারি</div>
+    <div class="trust-item">💬 সরাসরি Messenger অর্ডার</div>
+    <div class="trust-item">👕 ১০০% সফট কম্ফোর্ট কটন</div>
+    <div class="trust-item">🔄 সহজ সাইজ এক্সচেঞ্জ সুবিধা</div>
+  </div>
+</div>
+
+<section class="section" id="products">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">CURATED CATALOG</div>
+      <h2>Men's T-Shirt Collection (50 Items)</h2>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="filters">
+      <button class="filter active" onclick="setBrand('all',this)">সবগুলো (৫০)</button>
+      <button class="filter" onclick="setBrand('Puma',this)">Puma (১৭)</button>
+      <button class="filter" onclick="setBrand('Zara',this)">Zara (১৭)</button>
+      <button class="filter" onclick="setBrand('Adidas',this)">Adidas (১৬)</button>
+    </div>
+    <div class="search-sort">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="টি-শার্ট খুঁজুন (যেমন: Black, Zara)..." oninput="applyFilters()">
+      </div>
+      <select class="sort" id="sortSelect" onchange="applyFilters()">
+        <option value="default">সাজান: ডিফল্ট</option>
+        <option value="low">দাম: কম থেকে বেশি</option>
+        <option value="high">দাম: বেশি থেকে কম</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="result-bar">
+    <span id="resultCount">মোট ৫০টি টি-শার্ট দেখানো হচ্ছে</span>
+    <span>সাইজ সিলেক্ট করে "অর্ডার করুন" বাটনে ক্লিক করুন</span>
+  </div>
+
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="promo" id="offers">
+  <div>
+    <h2>পছন্দের টি-শার্টটি এখনই বুক করুন!</h2>
+    <p>যেকোনো ডিজাইন, সাইজ বা পাইকারি ও খুচরা অর্ডারের জন্য সরাসরি আমাদের Raifa Automation Messenger ইনবক্সে মেসেজ পাঠান।</p>
+  </div>
+  <a class="cta" href="https://m.me/61594718849729" target="_blank" rel="noopener">Chat on Messenger →</a>
+</section>
+
+<footer>
+  <div class="logo" style="justify-content:center;color:#fff">RASHED SHOP<span class="logo-dot"></span></div>
+  <p>RASHED SHOP — Men's Fashion & T-Shirt Collection<br>অর্ডার ও কাস্টমার সাপোর্টের জন্য Facebook Messenger-এ যোগাযোগ করুন।</p>
+  <small style="color:#64748b">© 2026 Rashed Shop. All rights reserved.</small>
+</footer>
+
+<a class="messenger" href="https://m.me/61594718849729" target="_blank" rel="noopener">💬 Messenger-এ অর্ডার করুন</a>
+
+<!-- Quick View Modal -->
+<div class="modal-backdrop" id="quickModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-img"><img id="mImg" src="" alt=""></div>
+    <div class="modal-body">
+      <span class="eyebrow" id="mBrand">BRAND</span>
+      <h3 id="mName">Product Name</h3>
+      <p id="mDesc">১০০% প্রিমিয়াম কটন ফেব্রিক, আরামদায়ক ফিট এবং দীর্ঘস্থায়ী কালার গ্যারান্টি। সারা দেশে ক্যাশ অন ডেলিভারি সুবিধা।</p>
+      <div style="font-size:12px;font-weight:700;margin-bottom:8px;color:#475569">সাইজ বেছে নিন:</div>
+      <div class="modal-sizes" id="mSizes"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto">
+        <div>
+          <span style="font-size:12px;color:#94a3b8;text-decoration:line-through" id="mOldPrice">৳1150</span>
+          <div style="font-size:24px;font-weight:900" id="mPrice">৳890</div>
+        </div>
+        <button class="cta" style="border:0;cursor:pointer" id="mOrderBtn">Messenger-এ অর্ডার করুন</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const MESSENGER_PAGE = "61594718849729";
+
+const photos = [
+  "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1622445275576-721325763afe?auto=format&fit=crop&w=600&q=80",
+  "https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=600&q=80"
+];
+
+const catalogData = [
+  // Puma (17 items)
+  ["Puma Essential Cat Black Tee","Puma",850,1050],
+  ["Puma Performance Dry-Fit Navy","Puma",890,1100],
+  ["Puma Classic White Logo Tee","Puma",820,990],
+  ["Puma Motorsport Red Edition","Puma",950,1200],
+  ["Puma Urban Heather Grey Tee","Puma",850,1050],
+  ["Puma Forest Green Athletic","Puma",890,1120],
+  ["Puma Street Graphic Charcoal","Puma",920,1150],
+  ["Puma Royal Blue Active Tee","Puma",860,1050],
+  ["Puma Minimalist Sand Beige","Puma",840,1020],
+  ["Puma Bold Chest Stripe Tee","Puma",910,1150],
+  ["Puma Olive Training Crewneck","Puma",880,1090],
+  ["Puma Maroon Heritage Tee","Puma",870,1080],
+  ["Puma Monochrome Split Tee","Puma",940,1180],
+  ["Puma Sky Blue Summer Fit","Puma",830,1000],
+  ["Puma Vintage Gold Print Tee","Puma",920,1150],
+  ["Puma Jet Black Oversized Fit","Puma",960,1220],
+  ["Puma Arctic White Sport Tee","Puma",850,1050],
+
+  // Zara (17 items)
+  ["Zara Heavyweight Boxy White","Zara",990,1250],
+  ["Zara Minimalist Espresso Brown","Zara",1050,1300],
+  ["Zara Washed Charcoal Oversized","Zara",1090,1350],
+  ["Zara Ribbed Knit Cream Tee","Zara",1120,1390],
+  ["Zara Studio Drop-Shoulder Black","Zara",1050,1300],
+  ["Zara Soft Sage Green Essential","Zara",980,1220],
+  ["Zara Paris Atelier Print Tee","Zara",1080,1350],
+  ["Zara Structured Navy Crewneck","Zara",990,1240],
+  ["Zara Terracotta Earth Tone Tee","Zara",1020,1280],
+  ["Zara Mercerized Cotton Slate","Zara",1150,1420],
+  ["Zara Vintage Acid Wash Grey","Zara",1090,1360],
+  ["Zara Off-White Textured Tee","Zara",1040,1290],
+  ["Zara Editorial Back-Print Tee","Zara",1120,1390],
+  ["Zara Classic Taupe Relaxed Fit","Zara",990,1240],
+  ["Zara Midnight Blue Premium Tee","Zara",1020,1260],
+  ["Zara Monochrome Contrast Collar","Zara",1060,1320],
+  ["Zara Pure Linen-Blend Ivory","Zara",1180,1450],
+
+  // Adidas (16 items)
+  ["Adidas Originals Trefoil Black","Adidas",890,1120],
+  ["Adidas 3-Stripes Classic White","Adidas",880,1100],
+  ["Adidas Aeroready Navy Sport","Adidas",920,1150],
+  ["Adidas Crimson Red Badge Tee","Adidas",890,1100],
+  ["Adidas Collegiate Green Tee","Adidas",910,1140],
+  ["Adidas Heather Grey Melange","Adidas",850,1050],
+  ["Adidas Skateboarding Boxy Tee","Adidas",960,1200],
+  ["Adidas Cobalt Blue Training Tee","Adidas",880,1090],
+  ["Adidas Burgundy Retro 3-Stripe","Adidas",930,1160],
+  ["Adidas Core Black Performance","Adidas",870,1080],
+  ["Adidas Chalk White Street Tee","Adidas",890,1110],
+  ["Adidas Olive Cargo Graphic Tee","Adidas",920,1150],
+  ["Adidas Charcoal Essentials Tee","Adidas",860,1070],
+  ["Adidas Sunrise Orange Active","Adidas",900,1120],
+  ["Adidas Teal Originals Crew","Adidas",910,1140],
+  ["Adidas Monochrome Camo Print","Adidas",950,1190]
+];
+
+const products = catalogData.map((item, idx) => ({
+  id: idx + 1,
+  name: item[0],
+  brand: item[1],
+  price: item[2],
+  oldPrice: item[3],
+  image: photos[idx % photos.length],
+  selectedSize: "L"
+}));
+
+let currentBrand = "all";
+let activeModalProduct = null;
+
+function selectSize(id, size, btn) {
+  const prod = products.find(p => p.id === id);
+  if (prod) prod.selectedSize = size;
+  const parent = btn.parentElement;
+  parent.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function orderProduct(id) {
+  const p = products.find(item => item.id === id);
+  if (!p) return;
+  const msg = `অর্ডার রিকোয়েস্ট: ${p.name} (${p.brand}) | সাইজ: ${p.selectedSize} | দাম: ৳${p.price}`;
+  window.open(`https://m.me/${MESSENGER_PAGE}?ref=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function openModal(id) {
+  const p = products.find(item => item.id === id);
+  if (!p) return;
+  activeModalProduct = p;
+  document.getElementById('mImg').src = p.image;
+  document.getElementById('mBrand').textContent = `${p.brand} COLLECTION • #${String(p.id).padStart(2,'0')}`;
+  document.getElementById('mName').textContent = p.name;
+  document.getElementById('mOldPrice').textContent = `৳${p.oldPrice}`;
+  document.getElementById('mPrice').textContent = `৳${p.price}`;
+
+  const sizesWrap = document.getElementById('mSizes');
+  sizesWrap.innerHTML = ['S','M','L','XL','XXL'].map(sz =>
+    `<button class="${p.selectedSize===sz?'active':''}" onclick="setModalSize('${sz}',this)">${sz}</button>`
+  ).join('');
+
+  document.getElementById('mOrderBtn').onclick = () => orderProduct(p.id);
+  document.getElementById('quickModal').classList.add('open');
+}
+
+function setModalSize(size, btn) {
+  if (!activeModalProduct) return;
+  activeModalProduct.selectedSize = size;
+  document.querySelectorAll('#mSizes button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function closeModal() {
+  document.getElementById('quickModal').classList.remove('open');
+}
+
+function setBrand(brand, btn) {
+  currentBrand = brand;
+  document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function applyFilters() {
+  const query = document.getElementById('searchInput').value.trim().toLowerCase();
+  const sort = document.getElementById('sortSelect').value;
+
+  let filtered = products.filter(p => {
+    const matchBrand = currentBrand === 'all' || p.brand === currentBrand;
+    const matchQuery = p.name.toLowerCase().includes(query) || p.brand.toLowerCase().includes(query);
+    return matchBrand && matchQuery;
+  });
+
+  if (sort === 'low') filtered.sort((a,b) => a.price - b.price);
+  if (sort === 'high') filtered.sort((a,b) => b.price - a.price);
+
+  document.getElementById('resultCount').textContent = `মোট ${filtered.length}টি টি-শার্ট দেখানো হচ্ছে`;
+  renderGrid(filtered);
+}
+
+function renderGrid(items) {
+  const grid = document.getElementById('productGrid');
+  if (!items.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;background:#fff;border-radius:16px;border:1px solid var(--line)">কোনো টি-শার্ট পাওয়া যায়নি। অন্য নাম দিয়ে খুঁজুন।</div>`;
+    return;
+  }
+  grid.innerHTML = items.map(p => `
+    <article class="card">
+      <div class="img-wrap">
+        <span class="brand-badge">${p.brand}</span>
+        <span class="stock-badge">In Stock</span>
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+        <button class="quick-view" onclick="openModal(${p.id})">Quick View</button>
+      </div>
+      <div class="info">
+        <div class="meta">${p.brand} Men's Edition • #${String(p.id).padStart(2,'0')}</div>
+        <div class="name">${p.name}</div>
+        <div class="sizes">
+          ${['S','M','L','XL'].map(sz => `<button class="size-btn ${p.selectedSize===sz?'selected':''}" onclick="selectSize(${p.id},'${sz}',this)">${sz}</button>`).join('')}
+        </div>
+        <div class="price-row">
+          <div class="price-box">
+            <span class="old">৳${p.oldPrice}</span>
+            <span class="price">৳${p.price}</span>
+          </div>
+          <button class="order" onclick="orderProduct(${p.id})">অর্ডার করুন</button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+renderGrid(products);
+</script>
+</body>
+</html>
